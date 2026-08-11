@@ -26,6 +26,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
       - name: Bundle Capacitor Bridge
         run: npx esbuild capacitor-src/bridge.js --bundle --outfile=cap-bridge.js --platform=browser
 
@@ -34,6 +35,7 @@ jobs:
           mkdir -p www
           cp index.html www/
           cp cap-bridge.js www/
+
       - name: Add Android Platform
         run: npx cap add android
 
@@ -51,4 +53,3 @@ jobs:
         with:
           name: app-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
-          
