@@ -1,5 +1,5 @@
 {
   "appId": "com.myapp.app",
   "appName": "MyApp",
-  "webDir": "."
+  "webDir": "www"
 }
