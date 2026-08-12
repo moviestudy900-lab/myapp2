@@ -38,7 +38,7 @@ jobs:
           cp index.html www/
           cp cap-bridge.js www/
           cp -r libs www/
-          cp -r assets www/
+          cp -r app-media www/
 
       - name: Add Android Platform
         run: npx cap add android
