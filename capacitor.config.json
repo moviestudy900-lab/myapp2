@@ -1,6 +1,6 @@
 {
   "appId": "com.myapp.app",
-  "appName": "MyApp",
+  "appName": "Tracker",
   "webDir": "www",
   "android": {
     "permissions": ["android.permission.SCHEDULE_EXACT_ALARM"]
