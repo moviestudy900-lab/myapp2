@@ -40,6 +40,9 @@ jobs:
       - name: Add Android Platform
         run: npx cap add android
 
+      - name: Generate App Icons from resources/icon.png
+        run: npx @capacitor/assets generate --android --iconBackgroundColor '#0f0f0f' --iconBackgroundColorDark '#0f0f0f'
+
       - name: Patch AndroidManifest for notification permissions
         run: |
           MANIFEST=android/app/src/main/AndroidManifest.xml
