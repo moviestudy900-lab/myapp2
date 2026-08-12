@@ -38,8 +38,6 @@ jobs:
 
       - name: Add Android Platform
         run: npx cap add android
-      - name: Add Android Platform
-        run: npx cap add android
 
       - name: Patch AndroidManifest for notification permissions
         run: |
