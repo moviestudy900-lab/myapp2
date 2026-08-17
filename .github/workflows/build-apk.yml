@@ -62,6 +62,8 @@ jobs:
               super.onCreate(savedInstanceState);
               this.bridge.getWebView().setVerticalScrollBarEnabled(false);
               this.bridge.getWebView().setHorizontalScrollBarEnabled(false);
+              this.bridge.getWebView().setOverScrollMode(android.webkit.WebView.OVER_SCROLL_NEVER);
+              this.bridge.getWebView().setScrollBarStyle(android.view.View.SCROLLBARS_INSIDE_OVERLAY);
             }
           '''
               idx = content.rfind('}')
