@@ -3294,6 +3294,14 @@ function _resolveConfirm(result) {
 }
 
 let _alertResolver = null;
+// The OK button in the alert modal (popup-custom-alert) calls this on
+// click to close the popup and resolve the pending customAlert() promise.
+// Without this, clicking OK threw a ReferenceError and the popup stayed
+// stuck open forever.
+function _resolveAlert(result) {
+  hidePopup('popup-custom-alert');
+  if (_alertResolver) { const r = _alertResolver; _alertResolver = null; r(result); }
+}
 function customAlert(message, opts = {}) {
   return new Promise(resolve => {
     document.getElementById('alert-modal-title').innerText = opts.title || tr('alert_default_title', 'Notice');
